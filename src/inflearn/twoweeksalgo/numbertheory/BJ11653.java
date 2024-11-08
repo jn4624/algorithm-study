@@ -14,11 +14,15 @@ public class BJ11653 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int number = Integer.parseInt(br.readLine());
 
-        for (int i = 2; i <= number; i++) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             while (number % i == 0) {
                 number /= i;
                 System.out.println(i);
             }
+        }
+
+        if (number > 1) {
+            System.out.println(number);
         }
     }
 }
